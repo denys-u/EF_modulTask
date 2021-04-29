@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "uO8nrehqQL+Z0Lp34q/6mnArVsByuRngK+/0xxUoTO7uRnvSLLdkPguwBm7fYL27aCXV+Dp2SjcLB0NbHqcQOw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Den\\source\\repos\\EF_modulTask\\EF_modulTask\\EF_modulTask\\EF_modulTask.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Den\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.13\\microsoft.netcore.app.host.win-x64.3.1.13.nupkg.sha512"
+  ],
+  "logs": []
+}
