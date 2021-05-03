@@ -1,12 +1,12 @@
-﻿using EF_modulTask.Entyties;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace EF_modulTask.EntityConfigurations
+﻿namespace EF_modulTask.EntityConfigurations
 {
+    using EF_modulTask.Entyties;
+    using Microsoft.EntityFrameworkCore;
+    using Microsoft.EntityFrameworkCore.Metadata.Builders;
+    using System;
+    using System.Collections.Generic;
+    using System.Text;
+
     public class ArtistConfiguration : IEntityTypeConfiguration<Artist>
     {
         public void Configure(EntityTypeBuilder<Artist> builder)
