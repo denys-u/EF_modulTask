@@ -11,7 +11,7 @@
     {
         public void Configure(EntityTypeBuilder<Artist> builder)
         {
-            builder.ToTable("Employee").HasKey(p => p.Id);
+            builder.ToTable("Artist").HasKey(p => p.Id);
             builder.Property(p => p.Id).HasColumnName("ArtistId");
             builder.Property(p => p.Name).HasColumnName("Name").HasMaxLength(50);
             builder.Property(p => p.DateOfBirth).HasColumnName("DateOfBirth").HasColumnType("datetime2");
