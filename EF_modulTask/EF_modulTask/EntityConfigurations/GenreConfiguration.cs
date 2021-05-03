@@ -12,6 +12,7 @@ namespace EF_modulTask.EntityConfigurations
         public void Configure(EntityTypeBuilder<Genre> builder)
         {
             builder.ToTable("Genre").HasKey(p => p.Id);
+            builder.Property(p => p.Id).HasColumnName("GenreId");
             builder.Property(p => p.Title).HasColumnName("Title").HasMaxLength(50);
         }
     }

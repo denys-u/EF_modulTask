@@ -17,5 +17,7 @@ namespace EF_modulTask.Entyties
         public string Email { get; set; }
 
         public string InstagramUrl { get; set; }
+
+        public virtual List<Song> Songs { get; set; } = new List<Song>();
     }
 }
