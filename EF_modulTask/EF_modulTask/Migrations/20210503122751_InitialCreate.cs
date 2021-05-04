@@ -104,6 +104,20 @@ namespace EF_modulTask.Migrations
                 name: "IX_Supply_SongId",
                 table: "Supply",
                 column: "SongId");
+
+            migrationBuilder.Sql(@"
+                 insert into Artist(Name,DateOfBirth,Phone,Email, InstagramUrl) VALUES('LilNasX','1999-04-09', '0302321','nas_a@gmail.com', 'https://www.instagram.com/lilnasx/')
+                 insert into Artist(Name,DateOfBirth,Phone,Email, InstagramUrl) VALUES('Travis Scott','1992-04-30','travis_sct@gmail.com', 'https://www.instagram.com/travisscott/')
+                 insert into Artist(Name,DateOfBirth,Phone,Email, InstagramUrl) VALUES('Stromae','1995-03-12','stromae@gmail.com', 'https://www.instagram.com/stromae/')
+                 insert into Artist(Name,DateOfBirth,Phone,Email, InstagramUrl) VALUES('Sub Urban','1999-10-22','suburban@gmail.com', 'https://www.instagram.com/suburban/')
+                 insert into Artist(Name,DateOfBirth,Phone,Email, InstagramUrl) VALUES('Outcast','1975-05-27','outcast@gmail.com','https://www.instagram.com/outkast/')
+
+                 insert into Song(Title, Duration, ReleasedDate, GenreID) Values('Old Town Road','00:03:32','2019-06-04', (select GenreID from Genre where Title = 'Country'))
+                 insert into Song(Title, Duration, ReleasedDate, GenreID) Values('Sicko mode','00:04:01','2018-02-11',(select GenreID from Genre where Title = 'Rap'))
+                 insert into Song(Title, Duration, ReleasedDate, GenreID) Values('Papaoutai','00:03:17','2013-11-06',(select GenreID from Genre where Title = 'Pop'))
+                 insert into Song(Title, Duration, ReleasedDate, GenreID) Values('Cradles','00:03:11','2019-10-02',(select GenreID from Genre where Title = 'Pop'))
+                 insert into Song(Title, Duration, ReleasedDate, GenreID) Values('Hey Ya','00:04:17','2004-04-17',(select GenreID from Genre where Title = 'Rap'))
+            ");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
