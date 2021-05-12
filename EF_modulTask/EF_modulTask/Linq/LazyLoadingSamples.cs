@@ -15,15 +15,17 @@ namespace EF_modulTask.Linq
         }
         public async Task Task1()
         {
-            var songs = await _context.Songs.Include(x => x.Artists).Include(x => x.Genre).ToListAsync();
-            var result = songs
-                .Where(x => x.Genre != null)
-                .Where(x => x.Artists.Any())
-                .Select(x => new { Title = x.Title, Artist = x.Artists.FirstOrDefault().Name, Genre = x.Genre.Title });
+            var song = await _context.Songs
+                            .Select(x => new
+                            {
+                                Title = x.Title,
+                                Name =x.Artists,
+                                Genre = x.Genre.Title
+                            }).ToListAsync();
 
-            foreach (var item in songs)
+            foreach (var item in song)
             {
-                Console.WriteLine($"Song:{item.Title} - Genre:{item.Genre} - Artist:{item.Artists}");
+                Console.WriteLine($"Song:{item.Title} - Genre:{item.Genre} - Artist:{item.Name}");
             }
         }
 
